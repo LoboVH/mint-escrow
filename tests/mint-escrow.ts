@@ -30,7 +30,7 @@ describe("mint-escrow", () => {
   const mainProgram = anchor.workspace.MintEscrow as Program<MintEscrow>;
 
 
-  const seller =  provider.wallet.publicKey; // anchor.web3.Keypair.generate();
+  const seller =   anchor.web3.Keypair.generate(); //  provider.wallet.publicKey;
   const payer = (provider.wallet as NodeWallet).payer;
   const buyer =  anchor.web3.Keypair.generate();
   const escrowedXTokens = anchor.web3.Keypair.generate();
